@@ -3,31 +3,9 @@ body {
 }
 
 /* navbar styles */
-
-.nav-button {
-    background-color: white;
-    border-radius: 25px;
-    border: solid;
-    color: rgb(0, 0, 0) !important;
-    padding: 8px 20px !important;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    margin: -5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.active {
-    background-color: #029ad0;
-}
-
-.nav-button:hover {
-    background-color: #a5d5cf;
-}
-
-.navbar-brand:hover {
-    background-color: #a5d5cf;
+.navbar {
+    padding: 10px 20px;
+    /* Adjust padding to align items properly */
 }
 
 .navbar-brand {
@@ -39,7 +17,50 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.navbar {
-    padding: 10px 20px;
-    /* Adjust padding to align items properly */
+.navbar-brand:hover {
+    background-color: #a5d5cf;
+}
+
+.nav-capsule {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* Match the capsule background */
+    border-radius: 25px;
+    /* Capsule shape */
+    padding: 5px 10px;
+    /* Adjust to your liking */
+}
+
+.nav-item {
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-button {
+    background-color: transparent;
+    /* Remove individual button backgrounds */
+    border: none;
+    /* Remove button borders */
+    color: rgb(0, 0, 0) !important;
+    padding: 8px 15px !important;
+    /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 5px;
+    /* Adjust spacing between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #a5d5cf;
+    /* Hover effect */
+}
+
+.active {
+    background-color: #029ad0;
 }
