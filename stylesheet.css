@@ -4,22 +4,23 @@ body {
 
 /* navbar styles */
 .navbar {
-    padding: 10px 20px;
-    /* Adjust padding to align items properly */
+    padding: 20px 30px;
 }
 
 .navbar-brand {
     font-size: 30px;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: white;
     border-radius: 25px;
     transition: background-color 0.3s ease;
+    position: relative;
+    text-decoration: none;
 }
 
-.navbar-brand:hover {
+/* .navbar-brand:hover {
     background-color: #a5d5cf;
-}
+} */
 
 .nav-capsule {
     display: flex;
@@ -28,8 +29,7 @@ body {
     /* Match the capsule background */
     border-radius: 25px;
     /* Capsule shape */
-    padding: 5px 10px;
-    /* Adjust to your liking */
+    padding: 10px 20px;
 }
 
 .nav-button {
@@ -46,7 +46,8 @@ body {
     position: relative;
 }
 
-.nav-button::after {
+.nav-button::after,
+.navbar-brand::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -60,15 +61,13 @@ body {
 }
 
 .nav-button:hover::after,
-.nav-button.active::after {
-    transform: scaleX(0.5);
+.nav-button.active::after,
+.navbar-brand:hover::after,
+.navbar-brand.active::after {
+    transform: scaleX(0.7);
     transform-origin: bottom;
 }
 
 /* .nav-button:hover {
     background-color: #a5d5cf;
 } */
-
-.nav-button.active {
-    background-color: transparent;
-}
