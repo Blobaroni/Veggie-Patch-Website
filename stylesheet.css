@@ -1,3 +1,45 @@
 body {
     background-color: #b0dbb2;
 }
+
+/* navbar styles */
+
+.nav-button {
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    color: rgb(0, 0, 0) !important;
+    padding: 8px 15px !important;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    background-color: #029ad0;
+}
+
+.nav-button:hover {
+    background-color: #a5d5cf;
+}
+
+.navbar-brand:hover {
+    background-color: #a5d5cf;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    padding: 10px 20px;
+    /* Adjust padding to align items properly */
+}
