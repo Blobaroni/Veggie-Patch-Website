@@ -1,4 +1,6 @@
 body {
+    background: url(images/majestic-snow-capped-mountain-with-lush-green-valley-landscape-photo.jpg) no-repeat;
+    background-size: cover;
     background-color: #b0dbb2;
 }
 
