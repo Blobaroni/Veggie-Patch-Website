@@ -55,14 +55,14 @@ body {
     left: 0;
     background-color: #029ad0;
     transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .nav-button:hover::after,
 .nav-button.active::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+    transform: scaleX(0.5);
+    transform-origin: bottom;
 }
 
 /* .nav-button:hover {
