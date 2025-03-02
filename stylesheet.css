@@ -1,5 +1,7 @@
 body {
     background-color: #b0dbb2;
+    background-image: url(images/the-caucasus-5302236_1280.jpg);
+    background-size: cover;
 }
 
 /* navbar styles */
