@@ -1,19 +1,20 @@
 body {
-    background-color: #b0dbb2;
-    background-image: url(images/the-caucasus-5302236_1280.jpg);
+    background-image: url(images/sunset-2739472_1280.jpg);
     background-size: cover;
 }
 
 /* navbar styles */
 .navbar {
     padding: 20px 30px;
+    /* make the opacity less */
+    opacity: 100%;
 }
 
 .navbar-brand {
     font-size: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 10px 20px;
-    background-color: white;
+    background-color: #E6ECF5;
     border-radius: 25px;
     transition: background-color 0.3s ease;
     position: relative;
@@ -27,7 +28,8 @@ body {
 .nav-capsule {
     display: flex;
     align-items: center;
-    background-color: white;
+    /* opacity: 1; */
+    background-color: #E6ECF5;
     /* Match the capsule background */
     border-radius: 25px;
     /* Capsule shape */
