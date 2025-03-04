@@ -64,6 +64,11 @@ body {
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
+.navbar-brand::after {
+    bottom: 4px;
+}
+
+
 .nav-button:hover::after,
 .nav-button.active::after,
 .navbar-brand:hover::after,
