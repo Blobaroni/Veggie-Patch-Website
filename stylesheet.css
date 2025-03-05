@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/sunset-2739472_1280.jpg);
+    background-image: url(images/homepage/sunset-2739472_1280.jpg);
     background-size: cover;
 }
 
@@ -7,15 +7,17 @@ body {
 .navbar {
     padding: 20px 30px;
     /* make the opacity less */
-    opacity: 100%;
 }
 
 .navbar-brand {
     font-size: 30px;
     /* font-weight: bold; */
-    padding: 10px 20px;
+    padding: 10px 40px;
+    /* 10px 20px ^^ */
     background-color: #E6ECF5;
-    border-radius: 25px;
+    /* background-color: rgba(230, 236, 245, 0.5); */
+    border-radius: 30px;
+    /* 25px ^^ */
     transition: background-color 0.3s ease;
     position: relative;
     text-decoration: none;
@@ -30,20 +32,25 @@ body {
     align-items: center;
     /* opacity: 1; */
     background-color: #E6ECF5;
+    /* background-color: rgba(230, 236, 245, 0.5); */
     /* Match the capsule background */
-    border-radius: 25px;
+    border-radius: 30px;
+    /* 25px ^^ */
     /* Capsule shape */
     padding: 10px 20px;
+    /* 10px 20px ^^ */
 }
 
 .nav-button {
     background-color: transparent;
     border: none;
     color: rgb(0, 0, 0) !important;
-    padding: 8px 15px !important;
+    padding: 8px 30px !important;
+    /* 8px 15px ^^ */
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    /* 20px ^^ */
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -58,14 +65,14 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #029ad0;
+    background-color: #02d08b;
     transform: scaleX(0);
     transform-origin: bottom;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .navbar-brand::after {
-    bottom: 4px;
+    bottom: 5px;
 }
 
 
