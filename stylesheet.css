@@ -6,9 +6,10 @@
 
 /* Index Bg */
 .index-bg {
-    /* background-image: url(images/homepage/index-bg.png); */
-    background-image: url(images/homepage/veggie-patch.png);
+
+    background-image: url(images/homepage/veggie-patch2.png);
     background-size: cover;
+    background-repeat: no-repeat;   
 }
 
 /* Veggie Profiles Bg */
