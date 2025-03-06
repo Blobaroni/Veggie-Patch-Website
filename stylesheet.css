@@ -1,7 +1,28 @@
-body {
-    background-image: url(images/homepage/Veggie\ Patch\ images.png);
+/* body {
+    
+} */
+
+/* backgrounds */
+
+/* Index Bg */
+.index-bg {
+    /* background-image: url(images/homepage/index-bg.png); */
+    background-image: url(images/homepage/veggie-patch.png);
     background-size: cover;
 }
+
+/* Veggie Profiles Bg */
+.veggie-profiles-bg {
+    background-image: url(images/veggie\ profiles/veggie-profiles.png);
+    background-size: cover;
+}
+
+/* Garden Layout Bg */
+.garden-layout-bg {
+    background-image: url(images/garden\ layout/garden-layout.png);
+    background-size: cover;
+}
+
 
 /* navbar styles */
 .navbar {
