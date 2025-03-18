@@ -1,20 +1,17 @@
-/* Body Styles */
-
-.top-margin {
-    margin-top: 300px;
-}
-
 /* body {
     
 } */
+
+
 
 /* backgrounds */
 
 /* Index Bg */
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;   
+    min-height: 100vh; /* this line of code makes the background 100% */
 }
 
 /* Veggie Profiles Bg */
@@ -27,6 +24,7 @@
 .garden-layout-bg {
     background-image: url(images/garden\ layout/garden-layout.png);
     background-size: cover;
+    min-height: 100vh; /* this line of code makes the background 100% */
 }
 
 
