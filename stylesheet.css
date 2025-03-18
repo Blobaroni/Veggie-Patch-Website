@@ -10,8 +10,9 @@
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
     background-size: cover;
-    background-repeat: no-repeat;   
-    min-height: 100vh; /* this line of code makes the background 100% */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
 }
 
 /* Veggie Profiles Bg */
@@ -24,79 +25,53 @@
 .garden-layout-bg {
     background-image: url(images/garden\ layout/garden-layout.png);
     background-size: cover;
-    min-height: 100vh; /* this line of code makes the background 100% */
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
 }
 
-
 /* navbar styles */
+
 .navbar {
-    padding: 10px 20px;
-    /* 20px 30px ^^ */ 
-
-    /* make the opacity less */
-
-    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
-    /* experiment with this ^^ */
+    padding: 15px 30px;
+    top: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand {
-    font-size: 26px;
-    /* 30px ^^ */
-
-    /* font-weight: bold; */
-    padding: 8px 30px;
-    /* 10px 20px ^^ */
-
-    background-color: #E6ECF5;
-    /* background-color: rgba(230, 236, 245, 0.5); */
-    border-radius: 25px;
-    /* 25px ^^ */
-    transition: background-color 0.3s ease;
-    position: relative;
-    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px 35px;
+    background-color: #4CAF50;
+    color: white !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-/* .navbar-brand:hover {
-    background-color: #a5d5cf;
-} */
+.navbar-brand:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
 
 .nav-capsule {
-    display: flex;
-    align-items: center;
-    /* opacity: 1; */
-    background-color: #E6ECF5;
-    /* background-color: rgba(230, 236, 245, 0.5); */
-    /* Match the capsule background */
-    border-radius: 25px;
-    /* 25px ^^ */
-
-    /* Capsule shape */
-    padding: 8px 15px;
-    /* 10px 20px ^^ */
-
+    background-color: rgba(217, 234, 253, 0.8);
+    border-radius: 30px;
+    padding: 5px;
 }
 
 .nav-button {
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0) !important;
-
-    padding: 6px 25px !important;
-    /* 8px 15px ^^ */
-
-    text-align: center;
-    text-decoration: none;
-
     font-size: 18px;
-    /* 20px ^^ */
-
-    margin: 0 3px;
-    /* 0 5px ^^ */
-
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative;
+    font-weight: 500;
+    padding: 10px 25px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
+
+.nav-button:hover {
+    background-color: rgba(76, 175, 80, 0.1);
+    transform: translateY(-2px);
+}
+
 
 .nav-button::after,
 .navbar-brand::after {
@@ -123,13 +98,94 @@
 .navbar-brand.active::after {
     transform: scaleX(0.7);
     transform-origin: bottom;
-
-    
-
-    /* background-color: rgba(165, 213, 207, 0.3); */
-    /* experiment with this ^^ */
 }
 
 /* .nav-button:hover {
     background-color: #a5d5cf;
 } */
+
+
+
+
+/* padding for index page */
+
+
+.index-body-1 {
+    padding-top: 250px;
+}
+
+.index-body-2 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+/* image styling */
+
+.veggie-bunch-image-container {
+    padding-left: 0;
+    padding-right: 30px;
+    /* Add some right padding to separate from text */
+}
+
+.veggie-bunch {
+    width: 180%;
+    /* Increase the image size */
+    max-width: none;
+    margin-left: -60%;
+
+}
+
+/* resizing */
+
+@media (min-width: 768px) {
+    .index-body-2 {
+        padding-right: 30px;
+        padding-left: 30px;
+        line-height: 1.7;
+    }
+}
+
+@media (min-width: 992px) {
+    .index-body-2 {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .index-body-1 {
+        padding-top: 100px;
+    }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+    .index-body-1 {
+        padding-top: 100px;
+        /* Reduce top padding for mobile */
+    }
+
+    .index-body-2 {
+        padding-right: 15px;
+        /* Further reduce padding for mobile */
+        padding-left: 15px;
+        font-size: 0.9rem;
+        /* Slightly smaller font size for mobile */
+        line-height: 1.5;
+    }
+
+    .veggie-bunch {
+        width: 100%;
+        /* Make image full width of its container on mobile */
+        margin-left: 0;
+        /* Reset margin */
+    }
+
+    .veggie-bunch-image-container {
+        padding-right: 15px;
+        /* Reduce right padding on mobile */
+        text-align: center;
+        /* Center the image on mobile */
+    }
+}
