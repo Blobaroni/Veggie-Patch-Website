@@ -65,6 +65,8 @@
     padding: 10px 25px !important;
     border-radius: 25px;
     transition: all 0.3s ease;
+    position: relative;
+    /* Ensure correct positioning for the active underline */
 }
 
 .nav-button:hover {
@@ -100,15 +102,8 @@
     transform-origin: bottom;
 }
 
-/* .nav-button:hover {
-    background-color: #a5d5cf;
-} */
-
-
-
 
 /* padding for index page */
-
 
 .index-body-1 {
     padding-top: 250px;
