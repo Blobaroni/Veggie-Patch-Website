@@ -183,12 +183,20 @@ html {
 }
 
 .parallax-transition {
-    background-color: rgb(255, 149, 0);
+    background-color: #02d08b;
+    /*     background-color: rgb(255, 149, 0); */
     /* Ensure transition is white to cover background */
     z-index: 10;
     /* Higher z-index for transition */
-    height: 20px;
+    height: 40px;
 }
+
+
+/* footer styles */
+.footer-style {
+background-color: #02d08b;
+}
+
 
 /* resizing */
 
