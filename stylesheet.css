@@ -1,16 +1,70 @@
+/* General styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Parallax sections */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+}
+
+.index-bg {
+    background-image: url(images/homepage/veggie-patch2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.garden-layout-bg {
+    background-image: url(images/garden\ layout/garden-layout.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Content wrapper */
+.parallax-content {
+    position: relative;
+    z-index: 10;
+    /* Ensures content stays above backgrounds */
+}
+
+/* Transition between sections */
+.parallax-transition {
+    height: 20px;
+    /* Adjust as needed */
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-size: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {}
+
 /* body {
     
 } */
-
-
 
 /* backgrounds */
 
 /* Index Bg */
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
     /* this line of code makes the background 100% */
 }
@@ -24,7 +78,10 @@
 /* Garden Layout Bg */
 .garden-layout-bg {
     background-image: url(images/garden\ layout/garden-layout.png);
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
     /* this line of code makes the background 100% */
 }
@@ -131,6 +188,58 @@
 
 }
 
+/* parallax styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Parallax container */
+.parallax-container {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Parallax sections */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+/* Background styles with fixed attachment for parallax effect */
+.index-bg,
+.garden-layout-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Ensure content stays above the parallax effect */
+.parallax-content {
+    position: relative;
+    /* Position relative to allow z-index to work */
+    z-index: 10;
+    /* Ensure content is above the background */
+}
+
+/* Parallax transition (optional visual element between sections) */
+.parallax-transition {
+    height: 20px;
+    /* Adjust as needed for spacing between sections */
+    background-color: rgba(255, 255, 255, 0);
+    /* Transparent or gradient */
+}
+
 /* resizing */
 
 @media (min-width: 768px) {
@@ -183,4 +292,18 @@
         text-align: center;
         /* Center the image on mobile */
     }
+}
+
+/* Ensure text is always above the parallax background */
+.parallax-content {
+    position: relative;
+    z-index: 11;
+    /* Higher z-index for text */
+}
+
+.parallax-transition {
+    background-color: rgb(129, 191, 85);
+    /* Ensure transition is white to cover background */
+    z-index: 12;
+    /* Higher z-index for transition */
 }
