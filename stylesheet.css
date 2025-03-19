@@ -8,59 +8,25 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Parallax sections */
-.parallax-section {
-    position: relative;
-    height: 100vh;
-}
 
-.index-bg {
-    background-image: url(images/homepage/veggie-patch2.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.garden-layout-bg {
-    background-image: url(images/garden\ layout/garden-layout.png);
-    background-attachment: fixed;
-    background-size: cover;
-}
 
-/* Content wrapper */
-.parallax-content {
-    position: relative;
-    z-index: 10;
-    /* Ensures content stays above backgrounds */
-}
-
-/* Transition between sections */
-.parallax-transition {
-    height: 20px;
-    /* Adjust as needed */
-}
-
-/* Navbar styles */
-.navbar {
-    padding: 15px 30px;
-}
-
-.navbar-brand {
-    font-size: 32px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 767px) {}
-
-/* body {
-    
-} */
 
 /* backgrounds */
 
 /* Index Bg */
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
+}
+
+.ground-bg {
+    background-image: url(images/homepage/ground-bg.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -190,12 +156,6 @@ html {
 
 /* parallax styles */
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-}
-
 /* Parallax container */
 .parallax-container {
     perspective: 1px;
@@ -214,16 +174,6 @@ html {
     transform-style: preserve-3d;
 }
 
-/* Background styles with fixed attachment for parallax effect */
-.index-bg,
-.garden-layout-bg {
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-}
-
 /* Ensure content stays above the parallax effect */
 .parallax-content {
     position: relative;
@@ -232,12 +182,12 @@ html {
     /* Ensure content is above the background */
 }
 
-/* Parallax transition (optional visual element between sections) */
 .parallax-transition {
+    background-color: rgb(255, 149, 0);
+    /* Ensure transition is white to cover background */
+    z-index: 10;
+    /* Higher z-index for transition */
     height: 20px;
-    /* Adjust as needed for spacing between sections */
-    background-color: rgba(255, 255, 255, 0);
-    /* Transparent or gradient */
 }
 
 /* resizing */
@@ -294,16 +244,5 @@ html {
     }
 }
 
-/* Ensure text is always above the parallax background */
-.parallax-content {
-    position: relative;
-    z-index: 11;
-    /* Higher z-index for text */
-}
 
-.parallax-transition {
-    background-color: rgb(129, 191, 85);
-    /* Ensure transition is white to cover background */
-    z-index: 12;
-    /* Higher z-index for transition */
-}
+
