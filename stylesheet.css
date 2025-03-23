@@ -6,6 +6,7 @@ html {
     height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    padding-top: 0;
 }
 
 /* backgrounds */
@@ -53,7 +54,7 @@ html {
 /* BUTTONS */
 
 .learn-more-button {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 25px;
@@ -63,15 +64,34 @@ html {
     font-size: 16px;
     cursor: pointer;
     border-radius: 25px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .learn-more-button:hover {
-    background-color: #45a049; 
+    background-color: #45a049;
     transform: translateY(-2px);
 }
 
 /* NAVBAR STYLES */
+
+/* Ensure the hamburger icon is visible on smaller screens */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+/* Navbar items will align horizontally when the menu is expanded */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the items to the right */
+}
+
+/* Make the hamburger menu icon stand out more */
+.navbar-toggler-icon {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
 
 .navbar {
     padding: 15px 30px;
@@ -159,8 +179,8 @@ html {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: #02d08b solid 5px; /* Green outline */
-
+    outline: #02d08b solid 5px;
+    /* Green outline */
 }
 
 /* image styling */
@@ -173,18 +193,19 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;  
-    height: 300px; 
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
-    overflow: hidden; 
-    outline: #02d08b solid 5px; /* Green outline */
+    overflow: hidden;
+    outline: #02d08b solid 5px;
+    /* Green outline */
 }
 
 .image-card img {
-    width: auto;        
-    height: auto;       
-    min-width: 140%;     
-    min-height: 140%;    
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
     display: block;
     object-fit: cover;
     border-radius: 50%;
@@ -200,9 +221,9 @@ html {
 /* Image styling with green outline */
 .veggie-bunch {
     width: 100%;
-    /* Ensure image remains responsive */
-    max-width: none;
-    /* Remove any max-width restrictions */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 /* parallax styles */
@@ -218,11 +239,12 @@ html {
 /* Parallax sections */
 .parallax-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 60px 0;
+    /* Adds spacing around the content */
     display: flex;
-    align-items: center;
     justify-content: center;
-    transform-style: preserve-3d;
+    align-items: center;
 }
 
 /* Ensure content stays above the parallax effect */
@@ -235,7 +257,7 @@ html {
 
 .parallax-transition {
     background-color: #02d08b;
-    /*     background-color: rgb(255, 149, 0); */
+    /* background-color: rgb(255, 149, 0); */
     /* Ensure transition is white to cover background */
     z-index: 10;
     /* Higher z-index for transition */
@@ -248,55 +270,95 @@ html {
 }
 
 /* resizing */
-
-@media (min-width: 768px) {
-    .index-body-2 {
-        padding-right: 30px;
-        padding-left: 30px;
-        line-height: 1.7;
-    }
-}
-
-@media (min-width: 992px) {
-    .index-body-2 {
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-}
-
-@media (max-width: 991px) {
-    .index-body-1 {
-        padding-top: 100px;
-    }
-}
-
-/* For small screens (mobile devices) */
-@media (max-width: 767px) {
-    .index-body-1 {
-        padding-top: 100px;
-        /* Reduce top padding for mobile */
-    }
-
+@media (max-width: 768px) {
     .index-body-2 {
         padding-right: 15px;
-        /* Further reduce padding for mobile */
         padding-left: 15px;
         font-size: 0.9rem;
-        /* Slightly smaller font size for mobile */
         line-height: 1.5;
+        margin-bottom: 150px;
     }
 
     .veggie-bunch {
         width: 100%;
-        /* Make image full width of its container on mobile */
-        margin-left: 0;
-        /* Reset margin */
+        /* Ensure it takes up full width */
+        height: auto;
+        max-height: 300px;
+        /* Limit the maximum height */
+        margin-top: 50px;
+        /* Adds space above the image */
     }
 
     .veggie-bunch-image-container {
         padding-right: 15px;
-        /* Reduce right padding on mobile */
         text-align: center;
-        /* Center the image on mobile */
+        margin-top: 50px;
     }
+
+    .image-card {
+        width: 250px;
+        height: 250px;
+    }
+
+
+
+    /* Adjust navbar size for smaller screens */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .mobile {
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+    }
+}
+
+
+
+/* For smaller screens, make sure the navbar buttons are stacked vertically */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-button {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    .parallax-section {
+        padding: 40px 0px;
+        /* Reduced padding for mobile */
+    }
+
+    .col-lg-6 {
+        margin-bottom: 30px;
+    }
+
+    .image-card {
+        width: 90%;
+        /* Ensure image takes up most of the width on mobile */
+        max-width: 400px;
+    }
+
+    /* Make text and images stack vertically on smaller screens */
+    .row {
+        flex-direction: column;
+    }
+
 }

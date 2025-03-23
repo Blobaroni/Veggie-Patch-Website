@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<Head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,30 +18,37 @@
          This is to ensure that my CSS Stylesheet is able to override the bootstrap CSS. -->
     <link rel="stylesheet" href="stylesheet.css">
 
-</Head>
+</head>
 
 <body> <!-- bootstrap column here -->
     <header>
         <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid justify-content-between">
-
                 <!-- Title on the Left -->
                 <!-- "navbar-brand" is a placeholder located on the left of the -->
                 <!-- navbar for brand names :D -->
                 <a class="navbar-brand" href="index.html">Veggie Patch</a>
 
+                <!-- Hamburger menu button (visible only on small screens) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <!-- Navigation buttons/links on the right -->
-                <ul class="navbar-nav nav-capsule">
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="veggie profiles.html">Veggie Profiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="garden layout.html">Garden Layout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-capsule">
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="veggie profiles.html">Veggie Profiles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="garden layout.html">Garden Layout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -49,13 +56,13 @@
     <!-- Parallax Sections -->
     <div class="parallax-section index-bg"> <!-- this is the 1st background div -->
         <div class="container parallax-content"> <!--body container-->
-            <div class="row">
+            <div class="row mobile">
                 <div class="col-sm index-body-1 veggie-bunch-image-container">
                     <div class="image-card">
-                    <img src="images/homepage/Veggie Patch images (5).png" class="img-fluid veggie-bunch"
-                        alt="bunch of vegetables">
+                        <img src="images/homepage/Veggie Patch images (5).png" class="img-fluid veggie-bunch"
+                            alt="bunch of vegetables">
                     </div>
-            </div>
+                </div>
                 <div class="col-sm top-margin index-body-1 index-body-2 text-card">
                     <h1 class="header-text">Unlock the Secrets of Vegetable Gardening</h1>
                     <h2 class="subheader-text">Discover the Power of Veggie Profiles</h2>
@@ -77,7 +84,9 @@
                         about
                         which veggies to grow and how to care for them. Learn about:
                     </p>
-                    <a href="veggie profiles.html" class="btn btn-success learn-more-button">Learn More</a>                </div>
+                    <a href="veggie profiles.html" class="btn btn-success learn-more-button">Learn More</a>
+                </div>
+
             </div>
         </div>
     </div> <!-- end of background 2nd background div-->
@@ -87,23 +96,17 @@
 
     <!-- Second Parallax Section -->
     <div class="parallax-section ground-bg">
-        <div class="container parallax-content index-body-1">
-            <div class="row">
-                <div class="col-sm no-padding-right">
-                    <img src="images/homepage/sunset-2739472_1280.jpg" class="img-fluid"
-                        alt="palm leaf over pool">
-                </div>
-                <div class="col-sm top-margin no-padding-left">
+        <div class="container parallax-content">
+            <div class="row align-items-center mobile">
+                <!-- Text Section on the Left -->
+                <div class="col-lg-6 index-body-1 text-card">
                     <h1 class="header-text">Unlock the Secrets of Vegetable Gardening</h1>
                     <h2 class="subheader-text">Discover the Power of Veggie Profiles</h2>
-
                     <p>
                         Welcome to Veggie Profiles, your ultimate guide to growing a vibrant and thriving vegetable
                         garden. Whether you're a seasoned gardener or just starting out, this page is designed to
-                        help
-                        you unlock the full potential of your garden by providing detailed insights into the world
-                        of
-                        vegetable cultivation.
+                        help you unlock the full potential of your garden by providing detailed insights into the world
+                        of vegetable cultivation.
                     </p>
 
                     <h3>What You'll Find Here</h3>
@@ -111,37 +114,80 @@
 
                     <p>
                         Each vegetable profile includes essential information to help you make informed decisions
-                        about
-                        which veggies to grow and how to care for them. Learn about:
+                        about which veggies to grow and how to care for them. Learn about:
                     </p>
 
                     <ul>
                         <li><strong>Ease of Growth:</strong> Find out which vegetables are perfect for beginners and
                             which require a bit more expertise.</li>
-                        <li><strong>Ideal Growing Conditions:</strong> Understand the specific needs of each
-                            variety,
+                        <li><strong>Ideal Growing Conditions:</strong> Understand the specific needs of each variety,
                             from sunlight and soil type to temperature and moisture levels.</li>
                         <li><strong>Best Times to Plant:</strong> Get tips on when to plant your favorite vegetables
-                            for
-                            optimal growth and harvest.</li>
+                            for optimal growth and harvest.</li>
+                    </ul>
+                </div>
+
+                <!-- Image Section on the Right -->
+                <div class="col-lg-6 image-card">
+                    <img src="images/homepage/Veggie Patch images (5).png" class="img-fluid veggie-bunch"
+                        alt="bunch of vegetables">
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-5 mobile">
+                <!-- Image Section on the Left -->
+                <div class="col-lg-6 image-card">
+                    <img src="images/homepage/Veggie Patch images (5).png" class="img-fluid veggie-bunch"
+                        alt="bunch of vegetables">
+                </div>
+
+                <!-- Text Section on the Right -->
+                <div class="col-lg-6 index-body-1 text-card">
+                    <h1 class="header-text">Unlock the Secrets of Vegetable Gardening</h1>
+                    <h2 class="subheader-text">Discover the Power of Veggie Profiles</h2>
+                    <p>
+                        Welcome to Veggie Profiles, your ultimate guide to growing a vibrant and thriving vegetable
+                        garden. Whether you're a seasoned gardener or just starting out, this page is designed to
+                        help you unlock the full potential of your garden by providing detailed insights into the world
+                        of vegetable cultivation.
+                    </p>
+
+                    <h3>What You'll Find Here</h3>
+                    <h4>Comprehensive Vegetable Profiles</h4>
+
+                    <p>
+                        Each vegetable profile includes essential information to help you make informed decisions
+                        about which veggies to grow and how to care for them. Learn about:
+                    </p>
+
+                    <ul>
+                        <li><strong>Ease of Growth:</strong> Find out which vegetables are perfect for beginners and
+                            which require a bit more expertise.</li>
+                        <li><strong>Ideal Growing Conditions:</strong> Understand the specific needs of each variety,
+                            from sunlight and soil type to temperature and moisture levels.</li>
+                        <li><strong>Best Times to Plant:</strong> Get tips on when to plant your favorite vegetables
+                            for optimal growth and harvest.</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div> <!-- end of background div-->
+    </div> <!-- end of background 3nd background div-->
 
-  <!--Footer-->
-  <footer class="text-center footer-style">
-    <!-- Copyright -->
-    <div class="text-center">
-      © 2024 Luke Pretorius
-    </div>
-  </footer>
+    <!--Footer-->
+    <footer class="text-center footer-style">
+        <!-- Copyright -->
+        <div class="text-center">
+            © 2024 Luke Pretorius
+        </div>
+    </footer>
 
     <!-- Boostrap JavaScript (placed before the closing </body> for performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+
+
 
 </body>
 
