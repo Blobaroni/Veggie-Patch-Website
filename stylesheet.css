@@ -211,6 +211,32 @@ html {
     border-radius: 50%;
 }
 
+.image-card-square {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    outline: #02d08b solid 5px;
+    /* Green outline */
+}
+
+.image-card-square img {
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
+    display: block;
+    object-fit: cover;
+
+}
+
+/* This code does nothing, just double check later IMPORTANT!!! */
+/* Veggie Bunch */
 .veggie-bunch-image-container {
     padding-left: 0;
     padding-right: 30px;
@@ -225,6 +251,8 @@ html {
     height: auto;
     border-radius: 50%;
 }
+
+
 
 /* parallax styles */
 
