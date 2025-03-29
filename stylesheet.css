@@ -178,9 +178,7 @@ html {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: #02d08b solid 5px;
-    /* Green outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* image styling */
@@ -189,7 +187,7 @@ html {
 .image-card {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,8 +195,6 @@ html {
     height: 300px;
     margin: 0 auto;
     overflow: hidden;
-    outline: #02d08b solid 5px;
-    /* Green outline */
 }
 
 .image-card img {
@@ -232,8 +228,9 @@ html {
     min-height: 140%;
     display: block;
     object-fit: cover;
-
 }
+
+
 
 /* This code does nothing, just double check later IMPORTANT!!! */
 /* Veggie Bunch */
@@ -252,7 +249,73 @@ html {
     border-radius: 50%;
 }
 
+/* Veggie Card Styling */
+.cards-margin-top {
+    margin-top: 15%;
+}
 
+.veggie-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition */
+    position: relative;
+    /* Required for proper z-index */
+    z-index: 1;
+    /* Ensure cards are initially above the shadow */
+}
+
+.veggie-card:hover {
+    transform: scale(1.05);
+    /* Slightly scale up the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow intensity */
+    z-index: 2;
+    /* Bring hovered card to the front */
+}
+
+.veggie-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.veggie-image {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.veggie-card:hover .veggie-image {
+    transform: scale(1.1);
+    /* Slightly scale up the image */
+}
+
+.veggie-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.veggie-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.veggie-description {
+    font-size: 16px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
 
 /* parallax styles */
 
@@ -389,4 +452,10 @@ html {
         flex-direction: column;
     }
 
+}
+
+@media (max-width: 768px) {
+    .veggie-card {
+        margin-bottom: 20px;
+    }
 }
