@@ -1,103 +1,139 @@
-/* Body Styles */
-
-.top-margin {
-    margin-top: 300px;
+/* General styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-top: 0;
 }
-
-/* body {
-    
-} */
 
 /* backgrounds */
 
 /* Index Bg */
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
-    background-size: contain;
-    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
+}
+
+.ground-bg {
+    background-image: url(images/homepage/ground-bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
 }
 
 /* Veggie Profiles Bg */
 .veggie-profiles-bg {
-    background-image: url(images/veggie\ profiles/veggie-profiles.png);
+    background-image: url(images/veggie\ profiles/veggie-profiles-5.png);
     background-size: cover;
 }
 
 /* Garden Layout Bg */
 .garden-layout-bg {
     background-image: url(images/garden\ layout/garden-layout.png);
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    /* this line of code makes the background 100% */
 }
 
 
-/* navbar styles */
+
+/* BUTTONS */
+
+.learn-more-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* NAVBAR STYLES */
+
+/* Ensure the hamburger icon is visible on smaller screens */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+/* Navbar items will align horizontally when the menu is expanded */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the items to the right */
+}
+
+/* Make the hamburger menu icon stand out more */
+.navbar-toggler-icon {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
 .navbar {
-    padding: 10px 20px;
-    /* 20px 30px ^^ */ 
-
-    /* make the opacity less */
-
-    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
-    /* experiment with this ^^ */
+    padding: 15px 30px;
+    top: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand {
-    font-size: 26px;
-    /* 30px ^^ */
-
-    /* font-weight: bold; */
-    padding: 8px 30px;
-    /* 10px 20px ^^ */
-
-    background-color: #E6ECF5;
-    /* background-color: rgba(230, 236, 245, 0.5); */
-    border-radius: 25px;
-    /* 25px ^^ */
-    transition: background-color 0.3s ease;
-    position: relative;
-    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px 35px;
+    background-color: #4CAF50;
+    color: white !important;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-/* .navbar-brand:hover {
-    background-color: #a5d5cf;
-} */
+.navbar-brand:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
 
 .nav-capsule {
-    display: flex;
-    align-items: center;
-    /* opacity: 1; */
-    background-color: #E6ECF5;
-    /* background-color: rgba(230, 236, 245, 0.5); */
-    /* Match the capsule background */
-    border-radius: 25px;
-    /* 25px ^^ */
-
-    /* Capsule shape */
-    padding: 8px 15px;
-    /* 10px 20px ^^ */
-
+    background-color: rgba(217, 234, 253, 0.8);
+    border-radius: 30px;
+    padding: 5px;
 }
 
 .nav-button {
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0) !important;
-
-    padding: 6px 25px !important;
-    /* 8px 15px ^^ */
-
-    text-align: center;
-    text-decoration: none;
-
     font-size: 18px;
-    /* 20px ^^ */
-
-    margin: 0 3px;
-    /* 0 5px ^^ */
-
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    padding: 10px 25px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
     position: relative;
+    /* Ensure correct positioning for the active underline */
+}
+
+.nav-button:hover {
+    background-color: rgba(76, 175, 80, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-button::after,
@@ -118,20 +154,308 @@
     bottom: 5px;
 }
 
-
 .nav-button:hover::after,
 .nav-button.active::after,
 .navbar-brand:hover::after,
 .navbar-brand.active::after {
     transform: scaleX(0.7);
     transform-origin: bottom;
-
-    
-
-    /* background-color: rgba(165, 213, 207, 0.3); */
-    /* experiment with this ^^ */
 }
 
-/* .nav-button:hover {
-    background-color: #a5d5cf;
-} */
+/* padding for index page */
+
+.index-body-1 {
+    padding-top: 230px;
+}
+
+.index-body-2 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.text-card {
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* image styling */
+
+/* Card styling for the image */
+.image-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.image-card-square {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    outline: #02d08b solid 5px;
+    /* Green outline */
+}
+
+.image-card-square img {
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* This code does nothing, just double check later IMPORTANT!!! */
+/* Veggie Bunch */
+.veggie-bunch-image-container {
+    padding-left: 0;
+    padding-right: 30px;
+    /* Add some right padding to separate from text */
+    text-align: center;
+}
+
+/* Image styling with green outline */
+.veggie-bunch {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Veggie Card Styling */
+.cards-margin-top {
+    margin-top: 15%;
+}
+
+.veggie-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition */
+    position: relative;
+    /* Required for proper z-index */
+    z-index: 1;
+    /* Ensure cards are initially above the shadow */
+}
+
+.veggie-card:hover {
+    transform: scale(1.05);
+    /* Slightly scale up the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow intensity */
+    z-index: 2;
+    /* Bring hovered card to the front */
+}
+
+.veggie-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.veggie-image {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.veggie-card:hover .veggie-image {
+    transform: scale(1.1);
+    /* Slightly scale up the image */
+}
+
+.veggie-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.veggie-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.veggie-description {
+    font-size: 16px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* parallax styles */
+
+/* Parallax container */
+.parallax-container {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Parallax sections */
+.parallax-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 60px 0;
+    /* Adds spacing around the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure content stays above the parallax effect */
+.parallax-content {
+    position: relative;
+    /* Position relative to allow z-index to work */
+    z-index: 10;
+    /* Ensure content is above the background */
+}
+
+.parallax-transition {
+    background-color: #02d08b;
+    /* background-color: rgb(255, 149, 0); */
+    /* Ensure transition is white to cover background */
+    z-index: 10;
+    /* Higher z-index for transition */
+    height: 40px;
+}
+
+/* footer styles */
+.footer-style {
+    background-color: #02d08b;
+}
+
+/* resizing */
+@media (max-width: 768px) {
+    .index-body-2 {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 150px;
+    }
+
+    .veggie-bunch {
+        width: 100%;
+        /* Ensure it takes up full width */
+        height: auto;
+        max-height: 300px;
+        /* Limit the maximum height */
+        margin-top: 50px;
+        /* Adds space above the image */
+    }
+
+    .veggie-bunch-image-container {
+        padding-right: 15px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .image-card {
+        width: 250px;
+        height: 250px;
+    }
+
+
+
+    /* Adjust navbar size for smaller screens */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .mobile {
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+    }
+}
+
+
+
+/* For smaller screens, make sure the navbar buttons are stacked vertically */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-button {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    .parallax-section {
+        padding: 40px 0px;
+        /* Reduced padding for mobile */
+    }
+
+    .col-lg-6 {
+        margin-bottom: 30px;
+    }
+
+    .image-card {
+        width: 90%;
+        /* Ensure image takes up most of the width on mobile */
+        max-width: 400px;
+    }
+
+    /* Make text and images stack vertically on smaller screens */
+    .row {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .veggie-card {
+        margin-bottom: 20px;
+    }
+}

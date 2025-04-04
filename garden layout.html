@@ -23,8 +23,7 @@
 
 <body class="garden-layout-bg"> <!-- bootstrap column here -->
     <header>
-        <!-- A grey horizontal navbar that becomes vertical on small screens -->
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid justify-content-between">
 
                 <!-- Title on the Left -->
@@ -45,10 +44,40 @@
                     </li>
                 </ul>
             </div>
-
         </nav>
-
     </header>
+
+    <div class="container"> <!--body container-->
+        <div class="row mobile">
+            <div class="col-sm index-body-1 veggie-bunch-image-container">
+
+            </div>
+            <div class="col-sm top-margin index-body-1 index-body-2 text-card">
+                <h1 class="header-text">Unlock the Secrets of Vegetable Gardening</h1>
+                <h2 class="subheader-text">Discover the Power of Veggie Profiles</h2>
+
+                <p>
+                    Welcome to Veggie Profiles, your ultimate guide to growing a vibrant and thriving vegetable
+                    garden. Whether you're a seasoned gardener or just starting out, this page is designed to
+                    help
+                    you unlock the full potential of your garden by providing detailed insights into the world
+                    of
+                    vegetable cultivation.
+                </p>
+
+                <h3>What You'll Find Here</h3>
+                <h4>Comprehensive Vegetable Profiles</h4>
+
+                <p>
+                    Each vegetable profile includes essential information to help you make informed decisions
+                    about
+                    which veggies to grow and how to care for them. Learn about:
+                </p>
+                <a href="veggie profiles.html" class="btn btn-success learn-more-button">Learn More</a>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Boostrap JavaScript (placed before the closing </body> for performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

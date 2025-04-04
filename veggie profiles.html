@@ -23,37 +23,145 @@
 
 <body class="veggie-profiles-bg"> <!-- bootstrap column here -->
     <header>
-        <!-- A grey horizontal navbar that becomes vertical on small screens -->
-        <nav class="navbar navbar-expand-sm">
+        <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid justify-content-between">
-
                 <!-- Title on the Left -->
                 <!-- "navbar-brand" is a placeholder located on the left of the -->
                 <!-- navbar for brand names :D -->
                 <a class="navbar-brand" href="index.html">Veggie Patch</a>
 
+                <!-- Hamburger menu button (visible only on small screens) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <!-- Navigation buttons/links on the right -->
-                <ul class="navbar-nav nav-capsule">
-                    <li class="nav-item">
-                        <a class="nav-link nav-button active" href="veggie profiles.html">Veggie Profiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="garden layout.html">Garden Layout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-capsule">
+                        <li class="nav-item">
+                            <a class="nav-link nav-button active" href="veggie profiles.html">Veggie Profiles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="garden layout.html">Garden Layout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
         </nav>
-
     </header>
+
+    <div class="container cards-margin-top">
+        <div class="row align-items-center mobile">
+
+            <!-- Carrot Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/carrot.png" class="img-fluid veggie-image" alt="Carrot">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Carrot</h2>
+                        <p class="veggie-description">
+                            Welcome to Veggie Profiles, your ultimate guide to growing vibrant carrots. Whether you're a
+                            seasoned gardener or just starting out, this guide will help you unlock the full potential
+                            of your carrot cultivation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Corn Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/corn.png" class="img-fluid veggie-image" alt="Corn">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Corn</h2>
+                        <p class="veggie-description">
+                            Discover the secrets to growing perfect corn in your garden. This profile provides detailed
+                            insights into corn cultivation, helping both beginners and experienced gardeners achieve a
+                            bountiful harvest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Broccoli Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/broccoli.png" class="img-fluid veggie-image" alt="Broccoli">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Broccoli</h2>
+                        <p class="veggie-description">
+                            Discover the secrets to growing perfect corn in your garden. This profile provides detailed
+                            insights into corn cultivation, helping both beginners and experienced gardeners achieve a
+                            bountiful harvest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tomato Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/tomato.png" class="img-fluid veggie-image" alt="Tomato">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Tomato</h2>
+                        <p class="veggie-description">
+                            Discover the secrets to growing perfect corn in your garden. This profile provides detailed
+                            insights into corn cultivation, helping both beginners and experienced gardeners achieve a
+                            bountiful harvest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cabbage Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/cabbage.png" class="img-fluid veggie-image" alt="Cabbage">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Cabbage</h2>
+                        <p class="veggie-description">
+                            Discover the secrets to growing perfect corn in your garden. This profile provides detailed
+                            insights into corn cultivation, helping both beginners and experienced gardeners achieve a
+                            bountiful harvest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Potato Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="veggie-card">
+                    <div class="veggie-image-container">
+                        <img src="images/veggie profiles/potato.png" class="img-fluid veggie-image" alt="Potato">
+                    </div>
+                    <div class="veggie-content">
+                        <h2 class="veggie-title">Potato</h2>
+                        <p class="veggie-description">
+                            Discover the secrets to growing perfect corn in your garden. This profile provides detailed
+                            insights into corn cultivation, helping both beginners and experienced gardeners achieve a
+                            bountiful harvest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Boostrap JavaScript (placed before the closing </body> for performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="CardHover.js"></script>
 
 </body>
 
