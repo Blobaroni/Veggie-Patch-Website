@@ -9,6 +9,14 @@ html {
 
 }
 
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 10%;
+}
+
 
 /* Backgrounds */
 .index-bg {
@@ -167,6 +175,53 @@ html {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-card-2 {
+    margin-top: 10%;
+    margin-bottom: 3%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.6s ease-in-out;
+    /* Smoother transition */
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    max-height: 200px;
+    /* limit height to hide the content initially */
+}
+
+.text-card-2 .card-content {
+    display: none;
+    /* Hide content initially */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    /* Smooth fade-in/out */
+}
+
+.text-card-2.expanded {
+    transform: scale(1.25);
+    z-index: 10;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    max-height: 700px;
+    /* Increase height when expanded */
+}
+
+.text-card-2.expanded .card-content {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+    /* Smooth fade-in */
+}
+
+.text-card-2:not(.expanded) .card-content {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.6s ease-out;
+    /* Smooth fade-out */
 }
 
 /* image styling */
