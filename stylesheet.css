@@ -6,39 +6,37 @@ html {
     height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    padding-top: 0;
+
 }
 
-/* backgrounds */
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 10%;
+}
 
-/* Index Bg */
+
+/* Backgrounds */
 .index-bg {
     background-image: url(images/homepage/veggie-patch2.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    /* this line of code makes the background 100% */
 }
 
 .ground-bg {
     background-image: url(images/homepage/ground-bg.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    /* this line of code makes the background 100% */
 }
 
-/* Veggie Profiles Bg */
 .veggie-profiles-bg {
     background-image: url(images/veggie\ profiles/veggie-profiles-5.png);
     background-size: cover;
 }
 
-/* Garden Layout Bg */
+.tips-and-tricks-bg {
+    background-image: url(images/tips\ and\ tricks/tips-and-tricks.png);
+    background-size: cover;
+}
+
 .garden-layout-bg {
     background-image: url(images/garden\ layout/garden-layout.png);
     background-attachment: fixed;
@@ -49,10 +47,7 @@ html {
     /* this line of code makes the background 100% */
 }
 
-
-
 /* BUTTONS */
-
 .learn-more-button {
     background-color: #4CAF50;
     color: white;
@@ -72,25 +67,23 @@ html {
     transform: translateY(-2px);
 }
 
-/* NAVBAR STYLES */
-
+/* Navbar Styles */
 /* Ensure the hamburger icon is visible on smaller screens */
 .navbar-toggler {
     border: none;
     background-color: transparent;
 }
 
-/* Navbar items will align horizontally when the menu is expanded */
 .navbar-collapse {
     display: flex;
     justify-content: flex-end;
-    /* Aligns the items to the right */
 }
 
 /* Make the hamburger menu icon stand out more */
 .navbar-toggler-icon {
     background-color: #4CAF50;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .navbar {
@@ -163,7 +156,6 @@ html {
 }
 
 /* padding for index page */
-
 .index-body-1 {
     padding-top: 230px;
 }
@@ -173,17 +165,76 @@ html {
     padding-left: 50px;
 }
 
+.content-padding {
+    padding-top: 10%;
+}
+
 .text-card {
     margin-top: 10%;
+    margin-bottom: 3%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* image styling */
+.text-card-2 {
+    margin-top: 10%;
+    margin-bottom: 3%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    /* Set initial height when content is hidden */
+    transition: height 0.10s ease-in, height 0.5 ease-out, box-shadow 0.8s ease-in-out;
+    /* Slower transition for resizing */
+}
 
-/* Card styling for the image */
+/* Hover effect */
+.text-card-2 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-card-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.text-card-2 .card-content {
+    opacity: 0;
+    pointer-events: none;
+    /* Disable interactions when content is hidden */
+    transition: opacity 0.10s ease-in;
+    transition: opacity 0s ease-out;
+    /* Slower fade-out for content */
+}
+
+.text-card-2.expanded {
+    height: auto;
+    /* Allow card to expand */
+    z-index: 10;
+    /* Bring it to the front */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+    /* This will make the card enlarge */
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.text-card-2.expanded .card-content {
+    opacity: 1;
+    pointer-events: all;
+    /* Enable interactions when content is visible */
+    transition: opacity 0.6s ease-in;
+    transition: opacity 0.6s ease-out;
+}
+
+/* image styling */
 .image-card {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
@@ -191,8 +242,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -217,8 +268,6 @@ html {
     height: 300px;
     margin: 0 auto;
     overflow: hidden;
-    outline: #02d08b solid 5px;
-    /* Green outline */
 }
 
 .image-card-square img {
@@ -230,9 +279,51 @@ html {
     object-fit: cover;
 }
 
+.image-card-2 {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
+.image-card-2 img {
+    width: auto;
+    height: auto;
+    min-width: 130%;
+    min-height: 130%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-/* This code does nothing, just double check later IMPORTANT!!! */
+/* Image card for person */
+.image-card-person {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card-person img {
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /* Veggie Bunch */
 .veggie-bunch-image-container {
     padding-left: 0;
@@ -254,6 +345,10 @@ html {
     margin-top: 15%;
 }
 
+.cards-margin-bottom {
+    margin-bottom: 15%;
+}
+
 .veggie-card {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -263,18 +358,13 @@ html {
     flex-direction: column;
     height: 100%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* Smooth transition */
     position: relative;
-    /* Required for proper z-index */
     z-index: 1;
-    /* Ensure cards are initially above the shadow */
 }
 
 .veggie-card:hover {
     transform: scale(1.05);
-    /* Slightly scale up the card */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Increase shadow intensity */
     z-index: 2;
     /* Bring hovered card to the front */
 }
@@ -286,7 +376,6 @@ html {
 
 .veggie-image {
     transition: transform 0.3s ease-in-out;
-    /* Smooth transition */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -294,7 +383,6 @@ html {
 
 .veggie-card:hover .veggie-image {
     transform: scale(1.1);
-    /* Slightly scale up the image */
 }
 
 .veggie-content {
@@ -318,46 +406,81 @@ html {
 }
 
 /* parallax styles */
-
-/* Parallax container */
 .parallax-container {
-    perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 /* Parallax sections */
 .parallax-section {
     position: relative;
-    min-height: 100vh;
+    background-attachment: fixed;
     padding: 60px 0;
-    /* Adds spacing around the content */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Ensure content stays above the parallax effect */
-.parallax-content {
-    position: relative;
-    /* Position relative to allow z-index to work */
-    z-index: 10;
-    /* Ensure content is above the background */
+    transition: transform 0.1s ease-out;
+    min-height: 100vh
 }
 
 .parallax-transition {
     background-color: #02d08b;
-    /* background-color: rgb(255, 149, 0); */
-    /* Ensure transition is white to cover background */
     z-index: 10;
-    /* Higher z-index for transition */
     height: 40px;
 }
 
-/* footer styles */
+/* Footer Styles */
 .footer-style {
     background-color: #02d08b;
+    width: 100%;
+    padding: 10px 0;
+    transition: padding 0.3s ease, transform 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.footer-style a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-style a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
+
+/* Styling for carousel images */
+.carousel-item img {
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+    height: 80vh;
+    /* Adjust the height of the carousel */
+}
+
+/* Carousel caption styling */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Adjust carousel controls (previous/next arrows) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4CAF50;
+    /* Match the theme */
+}
+
+/* Optional: Styling for buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
 }
 
 /* resizing */
@@ -391,8 +514,6 @@ html {
         height: 250px;
     }
 
-
-
     /* Adjust navbar size for smaller screens */
     .navbar {
         padding: 10px 20px;
@@ -407,12 +528,7 @@ html {
         margin-left: 1%;
         margin-bottom: 1%;
     }
-}
 
-
-
-/* For smaller screens, make sure the navbar buttons are stacked vertically */
-@media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column;
         width: 100%;
@@ -428,10 +544,7 @@ html {
         padding: 12px 25px;
         font-size: 18px;
     }
-}
 
-/* Adjustments for mobile view */
-@media (max-width: 768px) {
     .parallax-section {
         padding: 40px 0px;
         /* Reduced padding for mobile */
@@ -452,9 +565,6 @@ html {
         flex-direction: column;
     }
 
-}
-
-@media (max-width: 768px) {
     .veggie-card {
         margin-bottom: 20px;
     }
