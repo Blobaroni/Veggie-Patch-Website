@@ -6,7 +6,9 @@ html {
     height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
 }
+
 
 /* Backgrounds */
 .index-bg {
@@ -19,6 +21,11 @@ html {
 
 .veggie-profiles-bg {
     background-image: url(images/veggie\ profiles/veggie-profiles-5.png);
+    background-size: cover;
+}
+
+.tips-and-tricks-bg {
+    background-image: url(images/tips\ and\ tricks/tips-and-tricks.png);
     background-size: cover;
 }
 
@@ -149,6 +156,10 @@ html {
     padding-left: 50px;
 }
 
+.content-padding {
+    padding-top: 10%;
+}
+
 .text-card {
     margin-top: 10%;
     margin-bottom: 3%;
@@ -201,6 +212,51 @@ html {
     min-height: 140%;
     display: block;
     object-fit: cover;
+}
+
+.image-card-2 {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card-2 img {
+    width: auto;
+    height: auto;
+    min-width: 130%;
+    min-height: 130%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Image card for person */
+.image-card-person {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card-person img {
+    width: auto;
+    height: auto;
+    min-width: 140%;
+    min-height: 140%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Veggie Bunch */
@@ -284,29 +340,6 @@ html {
     flex-grow: 1;
 }
 
-/* Image card for person */
-.image-card-person {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.image-card-person img {
-    width: auto;
-    height: auto;
-    min-width: 140%;
-    min-height: 140%;
-    display: block;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 /* parallax styles */
 .parallax-container {
     height: 100vh;
@@ -335,6 +368,7 @@ html {
 /* footer styles */
 .footer-style {
     background-color: #02d08b;
+    width: 100%;
 }
 
 /* Styling for carousel images */
