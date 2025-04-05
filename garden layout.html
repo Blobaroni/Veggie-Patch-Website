@@ -25,27 +25,35 @@
     <header>
         <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid justify-content-between">
-
                 <!-- Title on the Left -->
                 <!-- "navbar-brand" is a placeholder located on the left of the -->
                 <!-- navbar for brand names :D -->
                 <a class="navbar-brand" href="index.html">Veggie Patch</a>
 
+                <!-- Hamburger menu button (visible only on small screens) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <!-- Navigation buttons/links on the right -->
-                <ul class="navbar-nav nav-capsule">
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="veggie profiles.html">Veggie Profiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button active" href="garden layout.html">Garden Layout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-capsule">
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="veggie profiles.html">Veggie Profiles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button active" href="garden layout.html">Garden Layout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="tips & tricks.html">Tips and Tricks</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
+
 
     <div class="container"> <!--body container-->
         <div class="row mobile">
@@ -110,9 +118,6 @@
         </div>
     </div>
 
-    <div class="parallax-transition"></div>
-
-
     <div class="container cards-margin-top cards-margin-bottom">
         <div class="row align-items-center mobile">
             <!-- Carrot Section -->
@@ -160,10 +165,20 @@
 
 
     <!--Footer-->
-    <footer class="text-center footer-style">
-        <!-- Copyright -->
-        <div class="text-center">
-            © 2024 Luke Pretorius
+    <footer class="footer-style">
+        <div class="footer-content">
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="veggie profiles.html">Veggie Profiles</a>
+                <a class="active" href="garden layout.html">Garden Layout</a>
+                <a href="tips & tricks.html">Tips and Tricks</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                © 2024 Luke Pretorius
+            </div>
         </div>
     </footer>
 

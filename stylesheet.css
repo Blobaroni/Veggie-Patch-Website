@@ -83,6 +83,7 @@ html {
 .navbar-toggler-icon {
     background-color: #4CAF50;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .navbar {
@@ -184,44 +185,53 @@ html {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.6s ease-in-out;
-    /* Smoother transition */
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
     position: relative;
-    max-height: 200px;
-    /* limit height to hide the content initially */
+    height: 150px;
+    /* Set initial height when content is hidden */
+    transition: height 0.10s ease-in, height 0.5 ease-out, box-shadow 0.8s ease-in-out;
+    /* Slower transition for resizing */
 }
 
+/* Hover effect */
+.text-card-2 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-card-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
 .text-card-2 .card-content {
-    display: none;
-    /* Hide content initially */
     opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-    /* Smooth fade-in/out */
+    pointer-events: none;
+    /* Disable interactions when content is hidden */
+    transition: opacity 0.10s ease-in;
+    transition: opacity 0s ease-out;
+    /* Slower fade-out for content */
 }
 
 .text-card-2.expanded {
-    transform: scale(1.25);
+    height: auto;
+    /* Allow card to expand */
     z-index: 10;
+    /* Bring it to the front */
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
-    max-height: 700px;
-    /* Increase height when expanded */
+    transform: scale(1.1);
+    /* This will make the card enlarge */
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .text-card-2.expanded .card-content {
-    display: block;
     opacity: 1;
-    transition: opacity 0.6s ease-in-out;
-    /* Smooth fade-in */
-}
-
-.text-card-2:not(.expanded) .card-content {
-    opacity: 0;
-    display: none;
+    pointer-events: all;
+    /* Enable interactions when content is visible */
+    transition: opacity 0.6s ease-in;
     transition: opacity 0.6s ease-out;
-    /* Smooth fade-out */
 }
 
 /* image styling */
@@ -420,11 +430,29 @@ html {
     height: 40px;
 }
 
-/* footer styles */
+/* Footer Styles */
 .footer-style {
     background-color: #02d08b;
     width: 100%;
+    padding: 10px 0;
+    transition: padding 0.3s ease, transform 0.3s ease;
+    position: relative;
+    text-align: center;
 }
+
+.footer-style a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-style a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
 
 /* Styling for carousel images */
 .carousel-item img {

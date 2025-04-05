@@ -1,17 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".text-card-2");
+document.querySelectorAll('.text-card-2').forEach(card => {
+    card.addEventListener('click', function () {
+        this.classList.toggle('expanded');
+    });
+});
 
-    cards.forEach(card => {
-        card.addEventListener("click", function () {
-            // Remove 'expanded' from all other cards
-            cards.forEach(c => {
-                if (c !== card) {
-                    c.classList.remove("expanded");
-                }
-            });
-
-            // Toggle 'expanded' on the clicked card
-            card.classList.toggle("expanded");
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.text-card-2')) {
+        document.querySelectorAll('.text-card-2').forEach(card => {
+            if (card.classList.contains('expanded')) {
+                card.classList.remove('expanded');
+            }
         });
+    }
+});
+
+const sound = new Audio('pop.mp3');
+
+document.querySelectorAll('.text-card-2').forEach(card => {
+    card.addEventListener('click', function () {
+        sound.play();
     });
 });
