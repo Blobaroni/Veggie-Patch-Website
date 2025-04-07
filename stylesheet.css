@@ -14,7 +14,7 @@ html {
     font-weight: bold;
     color: #4CAF50;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 
@@ -190,9 +190,7 @@ html {
     overflow: hidden;
     position: relative;
     height: 150px;
-    /* Set initial height when content is hidden */
     transition: height 0.10s ease-in, height 0.5 ease-out, box-shadow 0.8s ease-in-out;
-    /* Slower transition for resizing */
 }
 
 /* Hover effect */
@@ -281,7 +279,7 @@ html {
 
 .image-card-2 {
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,6 +367,10 @@ html {
     /* Bring hovered card to the front */
 }
 
+.veggie-card li {
+    margin-bottom: 10px;
+}
+
 .veggie-image-container {
     height: 200px;
     overflow: hidden;
@@ -394,6 +396,21 @@ html {
 
 .veggie-title {
     font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.veggie-prompt {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4CAF50;
+    content: middle;
+}
+
+.veggie-header {
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #4CAF50;
@@ -477,7 +494,6 @@ html {
     /* Match the theme */
 }
 
-/* Optional: Styling for buttons */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
@@ -567,5 +583,118 @@ html {
 
     .veggie-card {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-card-2 {
+        margin-top: 5%;
+        margin-bottom: 2%;
+        padding: 15px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subheader-text {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .text-card-2 h1 {
+        font-size: 25px;
+    }
+
+    .text-card-2 h2 {
+        font-size: 20px;
+    }
+
+    .text-card-2 h3,
+    .text-card-2 h4 {
+        font-size: 16px;
+    }
+}
+
+/* Adjust text card margins and padding for even smaller screens (phones) */
+@media (max-width: 480px) {
+    .text-card-2 {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subheader-text {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .text-card-2 h1 {
+        font-size: 20px;
+    }
+
+    .text-card-2 h2 {
+        font-size: 18px;
+    }
+
+    .text-card-2 h3,
+    .text-card-2 h4 {
+        font-size: 14px;
+    }
+}
+
+/* For responsive image grids */
+@media (max-width: 1200px) {
+
+    .image-card,
+    .image-card-square,
+    .image-card-2 {
+        max-width: 80%;
+        /* Ensure images are responsive on medium screens */
+    }
+}
+
+/* Smaller screens (tablets and below) */
+@media (max-width: 768px) {
+
+    .image-card,
+    .image-card-square,
+    .image-card-2 {
+        max-width: 100%;
+        /* Allow images to resize fully on smaller screens */
+        height: auto;
+    }
+
+    .image-card img,
+    .image-card-square img,
+    .image-card-2 img {
+        border-radius: 15px;
+        /* Slightly round corners on small screens for a softer look */
+    }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+
+    .image-card,
+    .image-card-square,
+    .image-card-2 {
+        max-width: 100%;
+        /* Allow images to take up full width on phones */
+        height: auto;
+        margin-bottom: 15px;
+        /* Add some spacing between cards */
     }
 }
