@@ -28,17 +28,17 @@ html {
 }
 
 .veggie-profiles-bg {
-    background-image: url(images/veggie\ profiles/veggie-profiles-5.png);
+    background-image: url(images/veggie-profiles/veggie-profiles-5.png);
     background-size: cover;
 }
 
 .tips-and-tricks-bg {
-    background-image: url(images/tips\ and\ tricks/tips-and-tricks.png);
+    background-image: url(images/tips-and-tricks/tips-and-tricks.png);
     background-size: cover;
 }
 
 .garden-layout-bg {
-    background-image: url(images/garden\ layout/garden-layout.png);
+    background-image: url(images/garden-layout/garden-layout.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
