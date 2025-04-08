@@ -8,7 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .title {
     font-size: 50px;
     font-weight: bold;
@@ -16,7 +15,6 @@ html {
     text-align: center;
     margin-top: 8%;
 }
-
 
 /* Backgrounds */
 .index-bg {
@@ -254,6 +252,7 @@ html {
     display: block;
     object-fit: cover;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .image-card-square {
